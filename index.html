@@ -173,13 +173,674 @@
 
 </section>
 
+<!-- ══ SECTION CONTACT ══ -->
+<section class="contact-section" id="contact">
 
+  <div class="section-tag">Contact</div>
+  <h2 class="section-title">Travaillons <em>ensemble</em></h2>
+  <p class="section-desc">
+    Tu as un projet en tête ? Une formation à organiser ? Je suis disponible pour échanger
+    et construire quelque chose de remarquable.
+  </p>
+
+  <div class="contact-grid">
+
+    <!-- INFOS GAUCHE -->
+    <div class="contact-info">
+
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-card-label">Email</div>
+          <div class="contact-card-value">jemima.moaye@email.com</div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-card-label">Téléphone</div>
+          <div class="contact-card-value">+225 XX XX XX XX XX</div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-card-label">Localisation</div>
+          <div class="contact-card-value">Abidjan, Côte d'Ivoire</div>
+        </div>
+      </div>
+
+      <div class="availability">
+        <div class="availability-dot"></div>
+        <span>Actuellement <strong>disponible</strong> pour de nouveaux projets</span>
+      </div>
+
+    </div>
+
+    <!-- FORMULAIRE DROITE -->
+    <div class="contact-form-wrap">
+      <form id="contactForm">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name">Nom complet</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="Ton nom" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Téléphone</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+225 XX XX XX XX">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="ton@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="subject">Sujet</label>
+            <input class="form-input" type="text" id="subject" name="subject" placeholder="Sujet de ton message" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Décris ton projet ou ta demande..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-send" id="btnSend">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+          Envoyer le message
+        </button>
+
+        <div class="form-message" id="formMessage"></div>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+
+    <!-- Logo -->
+    <a href="#" class="footer-logo">Jemima<span>.dev</span></a>
+
+    <!-- Navigation -->
+    <ul class="footer-nav">
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Réseaux sociaux -->
+    <div class="footer-socials">
+      <a href="#" class="footer-social" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/>
+        </svg>
+      </a>
+      <a href="#" class="footer-social" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+      <a href="#" class="footer-social" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+      <a href="#" class="footer-social" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p class="footer-copy">
+      © <span id="year"></span> <span>Jemima Moayé</span> — Tous droits réservés. Conçu avec passion à Abidjan.
+    </p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/JemimaNguess/MonPortfolio.git
-git push -u origin main
+
+
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Footer — Jemima Moayé</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+  /* ══════════════════════════════════════
+    VARIABLES
+  ══════════════════════════════════════ */
+  :root {
+    --neon:       #C084FC;
+    --neon-hot:   #A855F7;
+    --neon-deep:  #7C3AED;
+    --neon-glow:  rgba(192,132,252,0.35);
+    --font-display: 'Syne', sans-serif;
+    --font-body:    'DM Sans', sans-serif;
+    --transition:   0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  [data-theme="dark"] {
+    --bg:           #06040e;
+    --bg-card:      rgba(255,255,255,0.03);
+    --bg-input:     rgba(255,255,255,0.04);
+    --border:       rgba(192,132,252,0.15);
+    --border-input: rgba(192,132,252,0.2);
+    --text:         #F1EEFF;
+    --text-muted:   rgba(241,238,255,0.5);
+    --text-placeholder: rgba(241,238,255,0.25);
+  }
+
+  [data-theme="light"] {
+    --bg:           #faf8ff;
+    --bg-card:      rgba(124,58,237,0.04);
+    --bg-input:     rgba(124,58,237,0.03);
+    --border:       rgba(124,58,237,0.15);
+    --border-input: rgba(124,58,237,0.25);
+    --text:         #1a0533;
+    --text-muted:   rgba(26,5,51,0.55);
+    --text-placeholder: rgba(26,5,51,0.3);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    transition: background var(--transition), color var(--transition);
+  }
+
+  /* ══════════════════════════════════════
+    SECTION CONTACT
+  ══════════════════════════════════════ */
+  .contact-section {
+    padding: 100px 6vw 120px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Glow ambiance */
+  .contact-section::before {
+    content: '';
+    position: absolute;
+    top: -100px; left: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(192,132,252,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .contact-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(124,58,237,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ── Titre section ── */
+  .section-tag {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--neon);
+    border: 1px solid rgba(192,132,252,0.25);
+    border-radius: 20px;
+    padding: 5px 14px;
+    margin-bottom: 16px;
+    backdrop-filter: blur(8px);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .section-title em {
+    font-style: normal;
+    color: var(--neon);
+    text-shadow: 0 0 25px var(--neon-glow);
+  }
+
+  .section-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 56px;
+  }
+
+  /* ── Layout contact ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 48px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Infos contact gauche ── */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    backdrop-filter: blur(12px);
+    transition: border-color var(--transition), background var(--transition),
+                transform var(--transition), box-shadow var(--transition);
+  }
+
+  .contact-card:hover {
+    border-color: rgba(192,132,252,0.35);
+    background: rgba(192,132,252,0.05);
+    transform: translateX(4px);
+    box-shadow: 0 0 20px rgba(192,132,252,0.1);
+  }
+
+  .contact-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(192,132,252,0.1);
+    border: 1px solid rgba(192,132,252,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neon);
+    flex-shrink: 0;
+    transition: background var(--transition), box-shadow var(--transition);
+  }
+
+  .contact-card:hover .contact-icon {
+    background: rgba(192,132,252,0.18);
+    box-shadow: 0 0 14px var(--neon-glow);
+  }
+
+  .contact-icon svg { width: 18px; height: 18px; }
+
+  .contact-card-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+  .contact-card-value {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  /* Disponibilité */
+  .availability {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px;
+    background: rgba(192,132,252,0.06);
+    border: 1px solid rgba(192,132,252,0.2);
+    border-radius: 12px;
+    margin-top: 4px;
+  }
+
+  .availability-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 8px rgba(74,222,128,0.6);
+    animation: pulse-green 2s ease infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes pulse-green {
+    0%, 100% { box-shadow: 0 0 8px rgba(74,222,128,0.6); }
+    50%       { box-shadow: 0 0 16px rgba(74,222,128,0.9); }
+  }
+
+  .availability span {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+
+  .availability strong {
+    color: #4ade80;
+    font-weight: 600;
+  }
+
+  /* ── Formulaire droite ── */
+  .contact-form-wrap {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px;
+    backdrop-filter: blur(16px);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .form-group.full { grid-column: 1 / -1; }
+
+  .form-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 13px 16px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-input);
+    border-radius: 10px;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color var(--transition), background var(--transition),
+                box-shadow var(--transition);
+    resize: none;
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: var(--text-placeholder);
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
+    border-color: var(--neon);
+    background: rgba(192,132,252,0.05);
+    box-shadow: 0 0 0 3px rgba(192,132,252,0.12);
+  }
+
+  .form-textarea { height: 130px; }
+
+  /* Bouton envoyer */
+  .btn-send {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #7C3AED, #C084FC);
+    color: #fff;
+    border: none;
+    border-radius: 11px;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 0 20px rgba(192,132,252,0.35);
+    transition: transform var(--transition), box-shadow var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-send::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent 60%);
+    opacity: 0;
+    transition: opacity var(--transition);
+  }
+
+  .btn-send:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 32px rgba(192,132,252,0.55);
+  }
+
+  .btn-send:hover::before { opacity: 1; }
+  .btn-send:active { transform: translateY(0); }
+  .btn-send:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  .btn-send svg { width: 16px; height: 16px; }
+
+  /* Message succès / erreur */
+  .form-message {
+    display: none;
+    margin-top: 14px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .form-message.success {
+    display: block;
+    background: rgba(74,222,128,0.1);
+    border: 1px solid rgba(74,222,128,0.25);
+    color: #4ade80;
+  }
+
+  .form-message.error {
+    display: block;
+    background: rgba(248,113,113,0.1);
+    border: 1px solid rgba(248,113,113,0.25);
+    color: #f87171;
+  }
+
+  /* ══════════════════════════════════════
+    FOOTER
+  ══════════════════════════════════════ */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 48px 6vw 32px;
+    position: relative;
+  }
+
+  /* Ligne de glow */
+  footer::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 15%; right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--neon), transparent);
+    opacity: 0.4;
+  }
+
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  /* Logo footer */
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--neon);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .footer-logo span {
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  /* Nav footer */
+  .footer-nav {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  .footer-nav a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: color var(--transition), background var(--transition);
+  }
+
+  .footer-nav a:hover {
+    color: var(--neon);
+    background: rgba(192,132,252,0.08);
+  }
+
+  /* Réseaux sociaux footer */
+  .footer-socials {
+    display: flex;
+    gap: 10px;
+  }
+
+  .footer-social {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition), border-color var(--transition),
+                background var(--transition), transform var(--transition),
+                box-shadow var(--transition);
+  }
+
+  .footer-social svg { width: 15px; height: 15px; }
+
+  .footer-social:hover {
+    color: var(--neon);
+    border-color: var(--neon);
+    background: rgba(192,132,252,0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px var(--neon-glow);
+  }
+
+  /* Copyright */
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  .footer-copy span { color: var(--neon); }
+
+  /* ══════════════════════════════════════
+    RESPONSIVE
+  ══════════════════════════════════════ */
+  @media (max-width: 860px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-section { padding: 80px 5vw 100px; }
+  }
+
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form-wrap { padding: 24px 20px; }
+    .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .footer-nav { gap: 4px; }
+  }
+
+</style>
+</head>
+<body>
+
+
+
+
+
+<!-- EmailJS SDK -->
+
+<script>
+
+
+
+
+</script>
+</body>
+</html>

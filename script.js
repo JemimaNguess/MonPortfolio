@@ -217,3 +217,73 @@ function type() {
 // ══ INIT ══
 renderStats();
 type();
+
+// EMAILJS — remplace par tes vraies clés
+const EMAILJS_PUBLIC_KEY  = 'rUcHLI19yK5WAXk0t';   // ← Dashboard > Account > Public Key
+const EMAILJS_SERVICE_ID  = 'service_64tf1tr';   // ← Email Services > Service ID
+const EMAILJS_TEMPLATE_ID = 'template_yxv2ir7';  // ← Email Templates > Template ID
+
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
+// ══ FORMULAIRE ══
+const form       = document.getElementById('contactForm');
+const btnSend    = document.getElementById('btnSend');
+const formMsg    = document.getElementById('formMessage');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // État chargement
+  btnSend.disabled = true;
+  btnSend.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+         stroke-linecap="round" stroke-linejoin="round"
+         style="width:16px;height:16px;animation:spin 1s linear infinite">
+      <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+    </svg>
+    Envoi en cours...
+  `;
+
+  const params = {
+    from_name:    document.getElementById('name').value,
+    from_email:   document.getElementById('email').value,
+    from_phone:   document.getElementById('phone').value,
+    subject:      document.getElementById('subject').value,
+    message:      document.getElementById('message').value,
+  };
+
+  try {
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
+
+    formMsg.className = 'form-message success';
+    formMsg.textContent = '✓ Message envoyé ! Je te répondrai très bientôt.';
+    form.reset();
+
+  } catch (err) {
+    formMsg.className = 'form-message error';
+    formMsg.textContent = '✗ Erreur lors de l\'envoi. Réessaie ou contacte-moi directement.';
+    console.error('EmailJS error:', err);
+  }
+
+  // Réinitialise le bouton
+  btnSend.disabled = false;
+  btnSend.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+         stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px">
+      <line x1="22" y1="2" x2="11" y2="13"/>
+      <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+    </svg>
+    Envoyer le message
+  `;
+
+  // Cache le message après 5s
+  setTimeout(() => { formMsg.className = 'form-message'; }, 5000);
+});
+
+// ══ ANIMATION SPIN ══
+const style = document.createElement('style');
+style.textContent = `@keyframes spin { to { transform: rotate(360deg); } }`;
+document.head.appendChild(style);
+
+// ══ ANNÉE AUTO ══
+document.getElementById('year').textContent = new Date().getFullYear();
