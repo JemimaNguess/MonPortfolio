@@ -287,3 +287,66 @@ document.head.appendChild(style);
 
 // ══ ANNÉE AUTO ══
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ══ ANIMATION BARRES AU SCROLL ══
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    // Anime les barres
+    entry.target.querySelectorAll('.skill-bar-fill').forEach((bar, i) => {
+      const targetWidth = bar.getAttribute('data-width');
+      setTimeout(() => {
+        bar.style.width = targetWidth + '%';
+      }, i * 150);
+    });
+
+    // Anime les compteurs %
+    entry.target.querySelectorAll('.skill-pct').forEach((el, i) => {
+      const target = parseInt(el.getAttribute('data-pct'));
+      setTimeout(() => {
+        let start = 0;
+        const duration = 1200;
+        const startTime = performance.now();
+        function update(now) {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target) + '%';
+          if (progress < 1) requestAnimationFrame(update);
+          else el.textContent = target + '%';
+        }
+        requestAnimationFrame(update);
+      }, i * 150);
+    });
+
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.25 });
+
+document.querySelectorAll('.skill-card').forEach(card => observer.observe(card));
+
+// ══ FILTRE ══
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards      = document.querySelectorAll('.project-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+
+    // Actif
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.getAttribute('data-filter');
+
+    cards.forEach(card => {
+      const cats = card.getAttribute('data-category').split(' ');
+      const show = filter === 'all' || cats.includes(filter);
+
+      if (show) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
