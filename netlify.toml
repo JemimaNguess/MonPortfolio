@@ -1,0 +1,7 @@
+# Netlify détecte Next.js tout seul (runtime OpenNext). Les routes /api deviennent des fonctions serverless.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"

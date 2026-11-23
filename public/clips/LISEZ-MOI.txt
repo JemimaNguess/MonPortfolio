@@ -1,0 +1,7 @@
+Dépose ici les vidéos parlantes générées avec SadTalker (une par réponse), par exemple :
+  q01-fr.mp4, q02-fr.mp4 … q20-fr.mp4
+
+Conseils :
+- format MP4 (H.264), carré 512 × 512, moins de 2 Mo par clip ;
+- fond uni foncé de préférence : le site applique lui-même l'effet hologramme ;
+- ensuite, dans l'admin > Clips parlants, renseigne l'adresse /clips/q01-fr.mp4 du clip correspondant.
